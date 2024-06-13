@@ -1,12 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import css from "./SearchBox.module.css";
-import store from "../../redux/store";
+// import store from "../../redux/store";
 
 const SearchBox = ({ searchTerm, onSearchChange }) => {
-  const contact = useSelector((store) => store.contacts);
-  console.log(contact);
+  // const contact = useSelector((store) => store.contacts);
+  // console.log(contact);
 
   return (
     <div className={css.box}>

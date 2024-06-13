@@ -1,6 +1,6 @@
 // import { configureStore } from "@reduxjs/toolkit";
 import { createStore } from "redux";
-const reducer = (state) => {
+const reducer = (state = initialStore, action) => {
   return state;
 };
 const initialStore = {
