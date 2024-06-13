@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import store from "../redux/store.js";
-import { Provider } from "react-redux";
+
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
-// import ContactList from "./ContactList/ContactList";
+import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactForm from "./ContactForm/ContactForm";
 import initialContacts from "./initialContacts.json";
@@ -45,19 +44,17 @@ function App() {
   );
 
   return (
-    <Provider store={store}>
-      <div>
-        <h1 className="title">Phonebook</h1>
-        <ContactForm onSubmit={addContact} />
-        {/* <ContactForm /> */}
+    <div>
+      <h1 className="title">Phonebook</h1>
+      <ContactForm onSubmit={addContact} />
+      {/* <ContactForm /> */}
 
-        <SearchBox searchTerm={searchTerm} onSearchChange={handleSearch} />
-        <ContactList
-          contacts={filteredContacts}
-          onDeleteContact={handleDeleteContact}
-        />
-      </div>
-    </Provider>
+      <SearchBox searchTerm={searchTerm} onSearchChange={handleSearch} />
+      <ContactList
+        contacts={filteredContacts}
+        onDeleteContact={handleDeleteContact}
+      />
+    </div>
   );
 }
 
