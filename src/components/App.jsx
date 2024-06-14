@@ -5,9 +5,9 @@ import "./App.css";
 // import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactForm from "./ContactForm/ContactForm";
-import initialContacts from "./initialContacts.json";
+// import initialContacts from "./initialContacts.json";
 import { addContact, deleteContact } from "../redux/contacts/contactsSlice";
-import { changeFilter } from "../redux/filtersSlice";
+import { changeFilter } from "../redux/filters/filtersSlice";
 import { selectContacts, selectNameFilter } from "../redux/selectors";
 // const getStoredContacts = () => {
 //   const StoredContacts = localStorage.getItem("contacts");
@@ -16,11 +16,11 @@ import { selectContacts, selectNameFilter } from "../redux/selectors";
 
 function App() {
   const contacts = useSelector(selectContacts);
-  console.log(contacts);
+  // console.log(contacts);
   //
   // const [contacts, setContacts] = useState([]);
   const filter = useSelector(selectNameFilter);
-  console.log(filter);
+  // console.log(filter);
   // const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
   // useEffect(() => {
