@@ -1,5 +1,7 @@
-// import { configureStore } from "@reduxjs/toolkit";
-import { createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import contactsReducer from "./contacts/contacts-reducer";
+import filterReducer from "./filters/filter-reduser";
+// import { createStore } from "redux";
 
 // export const addContact = (items) => ({
 //   type: "contacts/add",
@@ -26,17 +28,23 @@ import { createStore } from "redux";
 //   return state;
 // };
 
-const initialStore = {
-  contacts: {
-    items: [],
+// const initialStore = {
+//   contacts: {
+//     items: [],
+//   },
+//   filters: {
+//     name: "",
+//   },
+// };
+// const store = createStore(
+//   reducer,
+//   initialStore,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );
+const store = configureStore({
+  reducer: {
+    contacts: contactsReducer,
+    filter: filterReducer,
   },
-  filters: {
-    name: "",
-  },
-};
-const store = createStore(
-  reducer,
-  initialStore,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+});
 export default store;
