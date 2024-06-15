@@ -1,1 +1,1 @@
-export const FILTER_CONTACTS = "contacts/filter";
+// export const FILTER_CONTACTS = "contacts/filter";
