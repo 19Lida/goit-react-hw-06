@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 // import { persistStore } from "redux-persist";
 // import rootReducer from "./root-reducer";
-import contactsReducer from "./contacts/contacts-reducer";
-import filterReducer from "./filters/filter-reduser";
+// import contactsReducer from "./contacts/contacts-reducer";
+import contactsSlice from "./contacts/contactsSlice";
+
+// import filterReducer from "./filters/filter-reduser";
+import filtersSlice from "./filters/filtersSlice";
 // import { createStore } from "redux";
 
 // export const addContact = (items) => ({
@@ -45,8 +48,8 @@ import filterReducer from "./filters/filter-reduser";
 // );
 const store = configureStore({
   reducer: {
-    contacts: contactsReducer,
-    filter: filterReducer,
+    contacts: contactsSlice,
+    filter: filtersSlice,
   },
 });
 export default store;
