@@ -1,2 +1,2 @@
-export const selectContacts = (store) => store.contacts.contacts.items;
-export const selectNameFilter = ({ filter }) => filter.filters.name;
+export const selectContacts = (store) => store.contacts;
+export const selectNameFilter = ({ filter }) => filter;
