@@ -31,7 +31,7 @@ function App() {
     // setContacts((prevContacts) => {
     //   return [...prevContacts, newContact];
     // });
-    dispatch(addContact({ newContact }));
+    dispatch(addContact(newContact));
   };
   const handleSearch = (name) => {
     // setSearchTerm(value);
