@@ -1,55 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
+import persistedReducer from "./root-reducer";
 // import { persistStore } from "redux-persist";
-// import rootReducer from "./root-reducer";
-// import contactsReducer from "./contacts/contacts-reducer";
-import contactsSlice from "./contacts/contactsSlice";
+import rootReducer from "./root-reducer";
 
-// import filterReducer from "./filters/filter-reduser";
-import filtersSlice from "./filters/filtersSlice";
-// import { createStore } from "redux";
+// import contactsSlice from "./contacts/contactsSlice";
+// import filtersSlice from "./filters/filtersSlice";
 
-// export const addContact = (items) => ({
-//   type: "contacts/add",
-//   payload: items,
-// });
-// export const deleteContact = (items) => ({
-//   type: "contacts/delete",
-//   payload: items,
-// });
-// export const changeFilter = (name) => ({
-//   type: "filter/change",
-//   payload: name,
-// });
-
-// const reducer = (state = initialStore, action) => {
-//   switch (action.type) {
-//     case "contacts/add":
-//       return { ...state, payload };
-//     case "contacts/delete":
-//       return state.filters((items) => items.id !== payload);
-//     case "filter/change":
-//       return;
-//   }
-//   return state;
-// };
-
-// const initialStore = {
-//   contacts: {
-//     items: [],
+// const store = configureStore({
+//   reducer: {
+//     contacts: contactsSlice,
+//     filter: filtersSlice,
 //   },
-//   filters: {
-//     name: "",
-//   },
-// };
-// const store = createStore(
-//   reducer,
-//   initialStore,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
+// });
 const store = configureStore({
-  reducer: {
-    contacts: contactsSlice,
-    filter: filtersSlice,
-  },
+  reducer: rootReducer,
 });
 export default store;
